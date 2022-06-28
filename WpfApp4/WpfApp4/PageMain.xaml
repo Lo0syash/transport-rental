@@ -1,0 +1,165 @@
+﻿<Window x:Class="WpfApp4.PageMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="PageMain" Height="450" Width="780" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#555556" Margin="10" MinHeight="345" MinWidth="710" MaxHeight="450" MaxWidth="780">
+        
+        <TextBlock Text="Аренда транспорта в Казани" FontSize="25" FontWeight="Bold"  Foreground="White" HorizontalAlignment="Center"/>
+
+        <Button  Margin="10,10,709,358" Background="#555556" BorderBrush="#555556" Click="Button_ClickExit" MinHeight="25" MaxHeight="55" MinWidth="30" MaxWidth="35">
+            <Image Source="images/1286853.png" RenderTransformOrigin="-0.222,0.605" />
+        </Button>
+
+        <!--<Button  Margin="734,10,10,358" Background="#555556" BorderBrush="#555556"  Click="Button_ClickInfo" >
+            <Image Source="images/info6.png" Margin="722,10,0,352"/>
+        </Button>-->
+
+        <Button FontSize="16" FontWeight="Bold"  Margin="709,10,10,358" Click="Button_ClickInfo" MinHeight="21" MaxHeight="55" MinWidth="18" MaxWidth="35">
+            <Image Source="images/info3.png" Margin="0,-1,0,0" />
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#555556"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="#555556"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <!--<Button  Margin="118,117,385,106"  Background="#555556" BorderBrush="#555556" Click="Button_ClickKikshering" >
+
+            <Image Source="images/samokate2.png" />
+        </Button>-->
+        <Button FontSize="16" FontWeight="Bold"  HorizontalAlignment="Left" Margin="72 -90 0 25" Click="Button_ClickKikshering" MinHeight="155" MaxHeight="150" MinWidth="55" MaxWidth="500">
+            <Image Source="images/samokate2.png" />
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#555556"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="#555556"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <!--<Image  Source="images/bike2.png" Margin="301,223,128,0"/>-->
+        <Button FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Margin="72 230 0 25"  Click="Button_ClickBikeshering" MinHeight="155" MaxHeight="155" MinWidth="55" MaxWidth="500">
+            <Image Source="images/bike2.png" Margin="0,-10,0,10" />
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="#555556"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <!--<Image Source="images/karshering2.png" Margin="16,235,497,-6" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.22"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.496"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>-->
+
+        <Button FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" Margin="72 -90 115 -295"  Click="Button_ClickKarshering" MinHeight="55" MaxHeight="150" MinWidth="55" MaxWidth="250">
+            <Image Source="images/karshering2.png" Margin="0,0,1,0" />
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Black"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="#555556"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <!--<Image Source="images/yaht2.png" Margin="466,94,30,106"/>-->
+        <Button FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" Margin="72 -90 115 25" Click="Button_ClickCharter" MinHeight="55" MaxHeight="150" MinWidth="55" MaxWidth="250">
+            <Image Source="images/yaht2.png" Margin="0,0,0,1" />
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Black"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="#555556"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button FontSize="16" FontWeight="Bold"  Margin="709,359,10,10" Click="Button_ClickWarn" MinHeight="21" MaxHeight="55" MinWidth="18" MaxWidth="35" RenderTransformOrigin="-0.152,7.71">
+            <Image Source="images/3521964.png" Margin="1,-1,0,0" RenderTransformOrigin="0.333,2.578" />
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#555556"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="#555556"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

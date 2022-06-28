@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1ACF0F39-E7E9-4022-901C-FA88F7A7F5EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp4</RootNamespace>
+    <AssemblyName>WpfApp4</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Car.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PageBank.xaml.cs">
+      <DependentUpon>PageBank.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageBikeshering.xaml.cs">
+      <DependentUpon>PageBikeshering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageCharter.xaml.cs">
+      <DependentUpon>PageCharter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagecomplete.xaml.cs">
+      <DependentUpon>Pagecomplete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pagecomplete2.xaml.cs">
+      <DependentUpon>Pagecomplete2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageEnd.xaml.cs">
+      <DependentUpon>PageEnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKarshering.xaml.cs">
+      <DependentUpon>PageKarshering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKikshering.xaml.cs">
+      <DependentUpon>PageKikshering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRide.xaml.cs">
+      <DependentUpon>PageKiksheringRide.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRide2.xaml.cs">
+      <DependentUpon>PageKiksheringRide2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRide2v1.xaml.cs">
+      <DependentUpon>PageKiksheringRide2v1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRide3.xaml.cs">
+      <DependentUpon>PageKiksheringRide3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRide3v1.xaml.cs">
+      <DependentUpon>PageKiksheringRide3v1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRidev1,2.xaml.cs">
+      <DependentUpon>PageKiksheringRidev1,2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRidev1,3.xaml.cs">
+      <DependentUpon>PageKiksheringRidev1,3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRidev1.xaml.cs">
+      <DependentUpon>PageKiksheringRidev1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRidev2,2.xaml.cs">
+      <DependentUpon>PageKiksheringRidev2,2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRidev2,3.xaml.cs">
+      <DependentUpon>PageKiksheringRidev2,3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRidev2.xaml.cs">
+      <DependentUpon>PageKiksheringRidev2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRidev3,2.xaml.cs">
+      <DependentUpon>PageKiksheringRidev3,2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRidev3,3.xaml.cs">
+      <DependentUpon>PageKiksheringRidev3,3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKiksheringRidev3.xaml.cs">
+      <DependentUpon>PageKiksheringRidev3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PageAuth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageBank.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageBikeshering.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageCharter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagecomplete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pagecomplete2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageEnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKarshering.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKikshering.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRide.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRide2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRide2v1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRide3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRide3v1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRidev1,2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRidev1,3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRidev1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRidev2,2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRidev2,3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRidev2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRidev3,2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRidev3,3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKiksheringRidev3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageReg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PageAuth.xaml.cs">
+      <DependentUpon>PageAuth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageMain.xaml.cs">
+      <DependentUpon>PageMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageReg.xaml.cs">
+      <DependentUpon>PageReg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="DB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB.edmx.diagram">
+      <DependentUpon>DB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\samokate3.png" />
+    <Resource Include="images\info6.png" />
+    <Resource Include="images\info5.png" />
+    <Resource Include="images\info4.jpg" />
+    <Resource Include="images\info3.png" />
+    <Resource Include="images\info2.png" />
+    <Resource Include="images\info.png" />
+    <Resource Include="images\1286853.png" />
+    <Resource Include="images\karshering2.png" />
+    <Resource Include="images\bike2.png" />
+    <Resource Include="images\yaht2.png" />
+    <Resource Include="images\samokate2.png" />
+    <Resource Include="images\bike.jpg" />
+    <Resource Include="images\karshering.jpg" />
+    <Resource Include="images\samokate.jpg" />
+    <Resource Include="images\yaht.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bank.png" />
+    <Resource Include="images\iomoney.png" />
+    <Resource Include="images\qiwi.png" />
+    <Resource Include="images\battery.png" />
+    <Resource Include="battery.png" />
+    <Resource Include="images\3521964.png" />
+    <Content Include="DB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DB.Context.cs</LastGenOutput>
+      <DependentUpon>DB.edmx</DependentUpon>
+    </Content>
+    <Content Include="DB.edmx.sql" />
+    <Content Include="DB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DB.cs</LastGenOutput>
+      <DependentUpon>DB.edmx</DependentUpon>
+    </Content>
+    <Resource Include="images\map.png" />
+    <Resource Include="images\yaht9.png" />
+    <Resource Include="images\yaht8.jpg" />
+    <Resource Include="images\yaht7.jpg" />
+    <Resource Include="images\yaht5.jpg" />
+    <Resource Include="images\yaht4.jpg" />
+    <Resource Include="images\bike3.png" />
+    <Resource Include="images\left1.png" />
+    <Resource Include="images\right1.png" />
+    <Resource Include="images\left.png" />
+    <Resource Include="images\right.png" />
+    <Resource Include="images\karshering4.png" />
+    <Resource Include="images\audi_a6.png" />
+    <Resource Include="images\bmw-black.png" />
+    <Resource Include="images\mercedes_C180.png" />
+    <Resource Include="images\mercedes_e200.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

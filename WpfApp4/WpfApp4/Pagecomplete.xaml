@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfApp4.Pagecomplete"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="Бронирование" Height="480" Width="450" WindowStartupLocation="CenterScreen">
+    <Grid MaxWidth="450" MaxHeight="480">
+        <Border Margin="10" CornerRadius="7">
+            <Border.Background>
+                <SolidColorBrush Color="Red" Opacity=".3"/>
+            </Border.Background>
+            <TextBlock Text="Бронирование" FontSize="25" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center" Margin="120,10,100,344"/>
+        </Border>
+        <ComboBox x:Name="Cb" BorderBrush="#FFFF0404" SelectionChanged="Cb_SelectionChanged" MaxHeight="25" MaxWidth="95" Margin="0 0 200 215">
+            <TextBlock Text="FK0912" />
+            <TextBlock Text="FK1118" />
+            <TextBlock Text="FK0590" />
+            <TextBlock Text="FK9463" />
+        </ComboBox>
+        <TextBlock Text=" -  выбор самоката" FontSize="19" FontWeight="SemiBold" Margin="170 98 90 0" MaxHeight="345"/> 
+        <Grid Width="400" Height="90" MaxHeight="91" MaxWidth="401" Margin="0 0 0 50">
+            <TextBlock Text="7 рублей - минута" FontSize="15" FontWeight="Bold" Margin="35 10 0 0"/>
+            <TextBlock Text="35 рублей - старт" FontSize="15" FontWeight="Bold" Margin=" 35 40 0 0"/>
+            <TextBlock Text="|" FontSize="15" FontWeight="Bold" Margin=" 195 0 0 0"/>
+            <TextBlock Text="|" FontSize="15" FontWeight="Bold" Margin=" 195 50 0 0"/>
+            <TextBlock Text="|" FontSize="15" FontWeight="Bold" Margin=" 195 40 0 0"/>
+            <TextBlock Text="|" FontSize="15" FontWeight="Bold" Margin=" 195 30 0 0"/>
+            <TextBlock Text="|" FontSize="15" FontWeight="Bold" Margin=" 195 20 0 0"/>
+            <TextBlock Text="|" FontSize="15" FontWeight="Bold" Margin=" 195 10 0 0"/>
+        <TextBlock Text="300 рублей - депозит" FontSize="15" FontWeight="Bold" Margin=" 220 10 0 0"/>
+        <TextBlock Text="35 рублей - страховка" FontSize="15" FontWeight="Bold" Margin=" 220 40 0 0"/>
+        </Grid>
+
+        <CheckBox Name="Check"  Margin="89 232 0 190" HorizontalAlignment="Left" Checked="Check_Checked"/>
+        <TextBlock Text=" - страховка" Margin="110 225 0 190" HorizontalAlignment="Left" FontSize="18" Foreground="Black" FontWeight="SemiBold"/>
+
+        <Button Content="Отправить" FontWeight="Bold" FontSize="10" Foreground="Black" Background="White"  MaxHeight="30" MaxWidth="95" Grid.ColumnSpan="2" Margin="0 110 0 0" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="12"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button  Margin="15 0 0 380" Click="Button_ClickExit" MinHeight="30" MaxHeight="35" MinWidth="20" MaxWidth="35" HorizontalAlignment="Left">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF555556" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FF555556" Opacity="0"/>
+
+            </Button.Background>
+            <Image Source="images/back.png" RenderTransformOrigin="-0.222,0.605" />
+        </Button>
+    </Grid>
+</Window>

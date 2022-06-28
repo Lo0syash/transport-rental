@@ -1,0 +1,79 @@
+﻿<Window x:Class="WpfApp4.PageBikeshering"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="Байкшеринг" Height="431" Width="600" WindowStartupLocation="CenterScreen">
+    <Grid MaxHeight="426.7" MaxWidth="600">
+
+        <Border>
+            <Image Source="images/bike3.png" Margin="0,-7,0,-8"/>
+        </Border>
+        <TextBlock Text="Байкшеринг" Foreground="WhiteSmoke" FontWeight="Bold" FontSize="35" HorizontalAlignment="Center" Margin="10"/>
+        <Grid MinWidth="289" MaxWidth="700">
+            <TextBlock Text="На дачу, на море, в магазин и без пробок? " Foreground="White" HorizontalAlignment="Center" Margin="65" Width="242" />
+            <TextBlock Text="Только на новых и быстрых элетровелосипедах" Foreground="White" HorizontalAlignment="Center"  Margin="90"  Width="269" />
+        </Grid >
+        <TextBlock Text="Арендуйте велосипед" Foreground="WhiteSmoke" FontSize="25" FontWeight="DemiBold" Margin="28,135,-18,-135"/>
+        <TextBlock Text="прямо сейчас" Foreground="WhiteSmoke" FontSize="25" FontWeight="DemiBold" Margin="28,176,-18,-176"/>
+        <TextBlock Text="Имя - " FontSize="12" Foreground="White" Margin="88 245 0 0" MaxHeight="140" MaxWidth="509"/>
+        <Border Margin="128,243,345,123" Background="White" CornerRadius="7" MinHeight="5" MaxHeight="19" MinWidth="100" MaxWidth="101">
+            <TextBox Name="Name"  FontWeight="Bold" FontSize="10" TextAlignment="Center" MaxLength="17" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="8,1,7,0" Width="104" Height="23" BorderBrush="White" TextInput="Name_TextInput" KeyDown="Name_KeyDown">
+            </TextBox>
+            <!--<TextBox FontWeight="Bold" FontSize="10" TextAlignment="Center"  MaxLength="12">
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="Margin" Value="200 140 250 230"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>-->
+        </Border>
+
+        <TextBlock Text="Номер телефона - " FontSize="12" Foreground="White" Margin="20 280 0 0" HorizontalAlignment="Left" MaxHeight="115" MaxWidth="509"/>
+        <Border Margin="128,276,345,91" Background="White" CornerRadius="7" MinHeight="5" MaxHeight="19" MinWidth="100" MaxWidth="101">
+            <TextBox Name="Phone" ToolTip="без +7 и 8 в начале" FontWeight="Bold" 
+                     FontSize="10" TextAlignment="Center" MaxLength="10" VerticalAlignment="Center" HorizontalAlignment="Center"  
+                     Margin="8,1,7,0" Width="104" Height="22" BorderBrush="White" TextChanged="Phone_TextChanged_1">
+            </TextBox>
+            <!--<TextBox FontWeight="Bold" Margin="-84,135,103,-135" FontSize="8" TextAlignment="Center"  MaxLength="12" >
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"/>
+                    <Setter Property="Margin" Value="200 140 250 230"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>-->
+        </Border>
+        <Border CornerRadius="10" Background="#878383" Margin="323,135,63,43" Opacity=".6"></Border>
+        <Grid >
+            <Button Content="Арендовать" FontWeight="Bold" Margin="180 260 0 0" HorizontalAlignment="Left" FontSize="10" Foreground="Black" Background="White" Click="Go_ListenSmaokate" MinHeight="29" MaxHeight="30" MinWidth="60" MaxWidth="75">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+        <Grid>
+            <TextBlock Text="20 000" FontSize="28" Foreground="White" FontWeight="DemiBold"  Margin="0,151,167,215" VerticalAlignment="Center" HorizontalAlignment="Right" />
+            <TextBlock Text="электровелосипедов" FontSize="18" Foreground="White" FontWeight="DemiBold" Margin="10,171,75,174" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+            <TextBlock Text="У нас самый большой парк " FontSize="14" Foreground="White" FontWeight="Thin"  Margin="0 100 80 0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="электровелосипедов в России, " FontSize="13" Foreground="White" FontWeight="Thin" Margin="0 100 72 -40" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="который растет с каждым"  FontSize="14" Foreground="White" FontWeight="Thin" Margin="0 100 95 -80" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="годом "  FontSize="14" Foreground="White" FontWeight="Thin" Margin="0 100 202 -120" VerticalAlignment="Center" HorizontalAlignment="Right" Width="46" Height="20"/>
+        </Grid>
+        <Button  Margin="10,10,555,358" Click="Button_ClickExit" MinHeight="20" MaxHeight="55" MinWidth="20" MaxWidth="35">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF555556" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FF555556" Opacity="0"/>
+
+            </Button.Background>
+            <Image Source="images/back.png" RenderTransformOrigin="-0.222,0.605" />
+        </Button>
+    </Grid>
+</Window>
