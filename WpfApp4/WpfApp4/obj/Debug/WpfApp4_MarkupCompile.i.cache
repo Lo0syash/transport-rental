@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\artur\source\repos\WpfApp4\WpfApp4\obj\Debug\
+C:\Users\artur\OneDrive\Documents\GitHub\transport-rental\WpfApp4\WpfApp4\obj\Debug\
 WpfApp4
 none
 false
 DEBUG;TRACE
-C:\Users\artur\source\repos\WpfApp4\WpfApp4\App.xaml
+C:\Users\artur\OneDrive\Documents\GitHub\transport-rental\WpfApp4\WpfApp4\App.xaml
 271018388513
 3-985277697
-37805187486
-18-1155855166
+37-1679493382
+18-888923577
 MainWindow.xaml;PageAuth.xaml;PageBank.xaml;PageBikeshering.xaml;PageCharter.xaml;Pagecomplete.xaml;Pagecomplete2.xaml;PageEnd.xaml;PageKarshering.xaml;PageKikshering.xaml;PageKiksheringRide.xaml;PageKiksheringRide2.xaml;PageKiksheringRide2v1.xaml;PageKiksheringRide3.xaml;PageKiksheringRide3v1.xaml;PageKiksheringRidev1,2.xaml;PageKiksheringRidev1,3.xaml;PageKiksheringRidev1.xaml;PageKiksheringRidev2,2.xaml;PageKiksheringRidev2,3.xaml;PageKiksheringRidev2.xaml;PageKiksheringRidev3,2.xaml;PageKiksheringRidev3,3.xaml;PageKiksheringRidev3.xaml;PageMain.xaml;PageReg.xaml;Style.xaml;
 
-True
+False
 
